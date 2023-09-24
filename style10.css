@@ -1,0 +1,172 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white ;
+    padding: 10px;
+    align-items: center;
+    position: fixed; /* ដាក់ឲ្យ novbar នៅស្ងៀមរឺជាប់នៅខាងលើ srcoll*/
+    width: 100%;  /* ពេលដាក់ position ត្រូវដាក់ width ដើម្បីឲ្យមកទំរង់ដើមវិញ */
+    top: 0px; /* ដាក់ nav ឲ្យជាប់ខាងលើ ​webpage */
+    left: 0px; /* ដាក់ nav ឲ្យជាប់ខាងឆ្វេង webpage */
+    
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+}
+.navbar-menu li{
+    margin-right: 10px;
+}
+.navbar-menu li a{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* នៅទំហំ 480 ឡើងទៅ phone-menu នឹងបាត់ */
+@media (min-width: 480px){
+    .phone-menu{
+        display: none;
+    }
+}
+
+/* នៅទំហំ 479 ចុះក្រោម navbar-menu នឹងបាត់ */
+@media (max-width: 479px){
+    .navbar-menu{
+        display: none;
+    }
+}
+
+.phone-menu{
+    margin-right: 40px;
+    /* color: white; */
+}
+.phone-menu li {
+    list-style: none;
+}
+.phone-menu li button{
+    padding: 10px 20px;
+    border: none ;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.phone-menu li button:hover{
+    background-color: blue;
+    color: white;
+}
+ 
+/* dropdown-menu: ដាក់ default-menu or navbar-menu​ ចូលទៅក្នុង menu តែមួយ ( នៅក្នុង class: phone-menu)*/
+.dropdown-menu{
+    display: none;
+}
+
+/* ឲ្យវា hover phone-menu នៅលើ dropdown-menu( ចុចលើ ំ menu ចេញ Home*/
+.phone-menu:hover .dropdown-menu{
+    display: block; /* បង្តើត block ថ្មីនៅក្នុង phone-menu */
+    position: absolute; /* ដាក់សម្រាប់ឲ្យទីតាំង Menu នៅដូចដើមអត់ដូរទំរង់ពេល hover */
+}
+.phone-menu:hover .dropdown-menu li{
+    background-color: rgba(118, 113, 113, 0.8); /* 0.8 : ដាក់ឲ្យម់ើលធ្លុះ( ត្រូវមានតម្លៃតូចជាង ១ ) */
+    padding: 10px 20px;
+}
+.phone-menu:hover .dropdown-menu li a{
+    color: white;
+    text-decoration: none;
+}
+.phone-menu:hover .dropdown-menu li:hover{ /* hover លើ li មួយទៀត​ */
+    background-color: blue;
+}
+
+/* margin-top: វាសម្រាប់ដាក់គម្លាតចេញពី webpage ខាងលើ
+   top: ដូចទៅនឹង គ្រាន់តែវាអាចដាក់ top= 0px ឲ្យជាប់នឹង webpage (margin-top= 0px ដាក់ឲ្យជាប់មិនបានទេ)
+   time: 1:00:00
+*/
+
+/* Content of web */
+.card{
+    background-color:rgb(104, 234, 234);
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    transition: all 0.5s;
+    
+    /* height: ;  មិនបាច់ដាក់ទេគឺវា auto*/ 
+}
+.card:hover{
+    box-shadow: 0px 5px 8px blue ;
+    background-color:rgb(0, 255, 170) ;
+}
+.card img{
+    width: 100%;
+}
+.card p{
+    font-size: 20px;
+}
+.card a{
+    background-color: rgb(210, 96, 210);
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s; /* កំំំំំំំំ​​​​​​​​ណត់វិនាទីឲ្យ hover */
+}
+.card a:hover{
+    background-color: rgb(244, 100, 100);
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(205, 194, 194) ;
+    padding: 20px 0px; 
+    margin: 40px auto;
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    font-size: 50px;
+}
+/*
+    flex-wrap: wrap; សម្រាប់ធ្វើឲ្យ flex វា responsive តាម device
+    transition: all 0.5s;  កំំំំំំំំ​​​​​​​​ណត់វិនាទីឲ្យ hover 
+    padding : គម្លាតចូលខាងក្នុង
+    margin : គម្លាតចេញខាងក្រៅ
+*/
+
+/* footer */
+.site-footer{
+    background-color: gray;
+    color: white;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    transition: color 0.5s;
+}
+.footer-links a:hover{
+    color:red; 
+}
+.footer-container{
+    padding: 0px 5px; /* លើក្រោម ឆ្វេងស្តាំ */ 
+}
+.footer-info{
+    text-align: center;
+    font-size: 20px;
+}
+
+/*  footer-container: អត់ទាន់ស្អាត */
